@@ -1,0 +1,19 @@
+{
+  "name": "fullstackopen_backend_phonebook",
+  "version": "0.0.1",
+  "description": "Exercices for PhoneBook backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"No test available\" && exit 1"
+  },
+  "author": "Jacques de Montbron",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
