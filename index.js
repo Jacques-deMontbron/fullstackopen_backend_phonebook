@@ -42,7 +42,13 @@ app.get("/api/persons/:id", (request, response) => {
     else {
         response.json(person)
     }
+})
 
+app.delete("/api/persons/:id", (request, response) => {
+    const requestId = Number(request.params.id)
+    persons = persons.filter(person => person.id !== requestId)
+
+    response.status(204).end()
 })
 
 app.get("/info/", (request, response) => {
