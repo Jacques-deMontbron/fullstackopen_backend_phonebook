@@ -1,6 +1,10 @@
 const express = require("express")
 var bodyParser = require('body-parser')
+var morgan = require('morgan')
 const app = express()
+
+morgan.token('body', function (req, res) { return JSON.stringify(req.body) })
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
 
 // create application/json parser
 var jsonParser = bodyParser.json()
